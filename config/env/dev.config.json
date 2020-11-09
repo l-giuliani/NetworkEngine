@@ -1,0 +1,8 @@
+{
+  "commDriver": {
+    "driverType": "socketio",
+    "params": {
+      "serverport": 8000
+    }
+  }
+}
