@@ -3,6 +3,7 @@ package communicationLibs
 import (
 	"github.com/l-giuliani/networkEngine"
 	"github.com/l-giuliani/networkEngine/driver/drivermodel"
+	"github.com/l-giuliani/networkEngine/dto"
 	"github.com/l-giuliani/networkEngine/libs"
 )
 
@@ -30,7 +31,8 @@ func (c *CommunicationLib) OnData(jwt string, endpointId string, data string) {
 	if !found {
 		return
 	}
-	gameEndpoint.Endpoint(game, data)
+	gameDto := dto.GameDto{&game.Users, &game.State}
+	gameEndpoint.Endpoint(&gameDto, data)
 
 }
 
