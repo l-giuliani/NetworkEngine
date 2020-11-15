@@ -1,5 +1,5 @@
 package commInterfaces
 
 type CommSubscriber interface {
-	OnData(s string)
+	OnData(jwt string, endpointId string, data string)
 }

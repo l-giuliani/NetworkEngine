@@ -28,7 +28,7 @@ func InitSystem() {
 	var commLibInterface commInterfaces.CommSubscriber
 	commLib := new(communicationLibs.CommunicationLib)
 	commLib.SetCommDriver(commDriver)
-	context.SetCommLib(commLib)
+	//context.SetCommLib(commLib)
 	commLibInterface = commLib
 	commDriver.Subscribe(commLibInterface)
 
